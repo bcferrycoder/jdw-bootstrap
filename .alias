@@ -1,0 +1,22 @@
+# GENERAL
+alias ls="ls -F"
+alias xe="emacs -nw -l ~/.emacs"
+
+# GIT
+alias gs="git status"
+alias gc="git commit -m"
+alias grev='git rev-list --full-history --all | head -1'
+alias gup='git add .; git commit -m "update"; git push;'
+
+# DOCKER
+alias docker='sudo docker'
+alias dr='docker_run'
+alias dps='docker ps'
+alias dim='docker images | grep jdw'
+
+# GPG
+alias encrypt="gpg -c"
+alias decrypt="gpg -d"
+
+# UTIL
+alias mem='while true; do free -m -t | tail -1'
