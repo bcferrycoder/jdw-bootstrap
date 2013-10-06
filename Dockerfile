@@ -30,7 +30,7 @@ RUN apt-get install -y nodejs
 
 ## ENVIRONMENT
 RUN useradd -d /jdw -c "jdw" -s /bin/bash jdw
+RUN git clone https://github.com/bcferrycoder/jdw-bootstrap.git /home/jdw
+RUN chown -R jdw /home/jdw
 ENV HOME /jdw
 USER jdw
-
-#RUN git clone https://github.com/bcferrycoder/jdw-bootstrap.git /jdw
