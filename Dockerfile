@@ -29,7 +29,7 @@ RUN apt-get update
 RUN apt-get install -y nodejs
 
 ## ENVIRONMENT
-RUN useradd -d /jdw -c "jdw" -s /bin/bash jdw; chown -R jdw.jdw /jdw
+RUN useradd -d /jdw -c "jdw" -s /bin/bash jdw
 ENV HOME /jdw
 USER jdw
 
