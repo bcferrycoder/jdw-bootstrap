@@ -9,7 +9,7 @@ RUN apt-get update
 RUN apt-get install -y -q curl wget git-core emacs vim file net-tools telnet mongodb-clients
 
 ## DOCS
-# RUN apt-get install   jekyll keydown markdown
+RUN apt-get install markdown jekyll keydown
 
 ## MYSQL
 #RUN apt-get install -y -q mysql-client libmysqlclient-dev
@@ -17,16 +17,28 @@ RUN apt-get install -y -q curl wget git-core emacs vim file net-tools telnet mon
 ## RUBY
 RUN apt-get install -y -q ruby1.9.1 ruby1.9.1-dev rubygems1.9.1 irb1.9.1 build-essential libopenssl-ruby1.9.1 libssl-dev zlib1g-dev
 
-## FRAMEWORKS
-RUN gem install rails sinatra --no-ri --no-rdoc
+## RAILS
+# RUN gem install rails --no-ri --no-rdoc
+
+## SINATRA
+RUN gem install sinatra --no-ri --no-rdoc
 
 ## GEMS
 RUN gem install httparty json mongo sinatra-reloader --no-ri --no-rdoc
+RUN gem install em-websocket onstomp thin keydown jekyll --no-ri --no-rdoc
+
+## PYTHON
+# RUN apt-get -y install python
+# RUN apt-get -y install python-pip python-dev build-essential
+# RUN pip install dexy
+
+## JAVA
+# run  apt-get install -q -y openjdk-6-jre-headless wget
 
 ## NODE
-RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ precise universe" >> /etc/apt/sources.list
-RUN apt-get update
-RUN apt-get install -y nodejs
+# RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ precise universe" >> /etc/apt/sources.list
+# RUN apt-get update
+# RUN apt-get install -y nodejs
 
 ## ENVIRONMENT
 RUN useradd -d /jdw -c "jdw" -s /bin/bash jdw
