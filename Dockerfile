@@ -14,6 +14,9 @@ RUN apt-get install markdown jekyll keydown
 ## MYSQL
 #RUN apt-get install -y -q mysql-client libmysqlclient-dev
 
+## SQLITE
+sudo apt-get -y install sqlite  libsqlite3-dev
+
 ## RUBY
 RUN apt-get install -y -q ruby1.9.1 ruby1.9.1-dev rubygems1.9.1 irb1.9.1 build-essential libopenssl-ruby1.9.1 libssl-dev zlib1g-dev
 
