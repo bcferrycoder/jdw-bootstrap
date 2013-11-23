@@ -16,7 +16,8 @@ if [ -f ~/.alias ]; then
 	. ~/.alias
 fi
 
-PS1="`hostname`$ "
+#PS1="`hostname`$ "
+PS1="jdw-docker$ "
 #echo -e "\033];`hostname`\\007"
 
 function docker_run { sudo docker run -i -t -p ":$2" "jdw/$1" /bin/bash --login; }
