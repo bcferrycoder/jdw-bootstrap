@@ -23,3 +23,11 @@ sudo docker version
 sudo docker run -i -t ubuntu /bin/bash -c echo docker installed
 
 sudo apt-get install -y git-core
+
+sudo useradd -d /home/jdw -c "jdw" -s /bin/bash jdw
+sudo git clone https://github.com/bcferrycoder/jdw-bootstrap.git /home/jdw
+sudo chown -R jdw /home/jdw
+echo "jdw ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers > /dev/null
+
+echo 'this host is now docker-ready'
+echo 'type "sudo su - jdw to proceed"'

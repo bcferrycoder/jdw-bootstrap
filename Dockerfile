@@ -9,7 +9,8 @@ RUN apt-get update
 RUN apt-get install -y -q curl wget git-core emacs vim file net-tools telnet mongodb-clients
 
 ## DOCS
-RUN apt-get install markdown jekyll keydown
+#RUN apt-get install markdown jekyll keydown
+RUN apt-get install
 
 ## MYSQL
 #RUN apt-get install -y -q mysql-client libmysqlclient-dev
@@ -44,8 +45,8 @@ RUN gem install em-websocket onstomp thin keydown jekyll --no-ri --no-rdoc
 # RUN apt-get install -y nodejs
 
 ## ENVIRONMENT
-RUN useradd -d /jdw -c "jdw" -s /bin/bash jdw
+RUN useradd -d /home/jdw -c "jdw" -s /bin/bash jdw
 RUN git clone https://github.com/bcferrycoder/jdw-bootstrap.git /home/jdw
 RUN chown -R jdw /home/jdw
-ENV HOME /jdw
-USER jdw
+ENV HOME /home/jdw
+#USER jdw
