@@ -1,0 +1,15 @@
+[user]
+        name = John Wetherill
+        email = jdw@bcferrycoder.com
+[core]
+        excludesfile = /home/jdw/.gitignore_global
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/bcferrycoder/jdw-bootstrap.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
