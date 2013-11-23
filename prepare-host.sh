@@ -28,10 +28,12 @@ sudo apt-get install -y git-core
 
 sudo useradd -d /home/${USER} -c "${USER}" -s /bin/bash ${USER}
 sudo git clone https://github.com/bcferrycoder/jdw-bootstrap.git /home/${USER}
-sudo chown -R ${USER} /home/${USER}
+sudo mkdir -p /home/${USER}/.git /home/${USER}/.ssh
+sudo cp ~ubuntu/.ssh/authorized_keys /home/${USER}/.ssh
+sudo chmod -R 700 /home/${USER}/.ssh
+sudo chown -R ${USER}.${USER} /home/${USER}
 echo "${USER} ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers > /dev/null
-sudo mkdir /home/${USER}/.git
 sudo cp config/john-gitconfig /home/${USER}/.git/config
 
 echo 'this host is now docker-ready'
-echo 'type "sudo su - ${USER} to proceed"'
+echo "type \"sudo su - ${USER} to proceed\""
