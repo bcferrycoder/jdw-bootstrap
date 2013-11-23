@@ -2,8 +2,6 @@
 
 USER=jdw
 
-if  false 
-then
 # run this on ubuntu 13.04 host to install docker
 
 sudo apt-get update
@@ -27,14 +25,13 @@ sudo docker version
 sudo docker run -i -t ubuntu /bin/bash -c echo docker installed
 
 sudo apt-get install -y git-core
-fi
 
 sudo useradd -d /home/${USER} -c "${USER}" -s /bin/bash ${USER}
 sudo git clone https://github.com/bcferrycoder/jdw-bootstrap.git /home/${USER}
-sudo chown -R jdw /home/${USER}
+sudo chown -R ${USER} /home/${USER}
 echo "${USER} ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers > /dev/null
 sudo mkdir /home/${USER}/.git
 sudo cp config/john-gitconfig /home/${USER}/.git/config
 
 echo 'this host is now docker-ready'
-echo 'type "sudo su - jdw to proceed"'
+echo 'type "sudo su - ${USER} to proceed"'
