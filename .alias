@@ -20,3 +20,6 @@ alias decrypt="gpg -d"
 
 # UTIL
 alias mem='while true; do free -m -t | tail -1'
+
+alias dodev='git clone https://github.com/bcferrycoder/jdw-dev.git dev'
+alias doblog='git clone https://github.com/bcferrycoder/draught.git blogs'
