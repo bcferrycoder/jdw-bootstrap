@@ -13,6 +13,8 @@ alias docker='sudo docker'
 alias dr='docker_run'
 alias dps='docker ps'
 alias dim='docker images | grep jdw'
+alias dst='docker stop'
+alias drm='docker rm'
 
 # GPG
 alias encrypt="gpg -c"
