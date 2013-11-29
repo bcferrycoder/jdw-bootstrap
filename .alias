@@ -16,6 +16,7 @@ alias dim='docker images | grep jdw'
 alias dst='docker stop'
 alias drm='docker rm'
 alias drmi='docker rmi'
+alias dc="docker commit"
 
 # GPG
 alias encrypt="gpg -c"
@@ -24,5 +25,5 @@ alias decrypt="gpg -d"
 # UTIL
 alias mem='while true; do free -m -t | tail -1'
 
+alias doblog='https://github.com/bcferrycoder/bcferrycoder.github.com.git blog'
 alias dodev='git clone https://github.com/bcferrycoder/jdw-dev.git dev'
-alias doblog='git clone https://github.com/bcferrycoder/draught.git blogs'
