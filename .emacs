@@ -1114,11 +1114,11 @@ I miss 'z.' 'zRET' 'z-' 'H' 'M' 'L' too much"
 ; (setq mail-default-reply-to "john.wetherill@eng.sun.com")
 ; (setq vm-mail-header-from "john.wetherill@eng.sun.com")
 
-(setq gnus-select-method '(nntp "engnews1.eng.sun.com"))
+;(setq gnus-select-method '(nntp "engnews1.eng.sun.com"))
 
 
-(setq url-proxy-services '(("http"     . "webcache-cup.eng.sun.com:8080")
-			   ("no_proxy" . "^.*\\(eng.sun\\|seanet\\)\.com")))
+;(setq url-proxy-services '(("http"     . "webcache-cup.eng.sun.com:8080")
+;			   ("no_proxy" . "^.*\\(eng.sun\\|seanet\\)\.com")))
 (custom-set-variables
  '(load-home-init-file t t)
 ; '(user-mail-address "john@los-gatos.net")
