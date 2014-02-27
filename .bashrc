@@ -20,3 +20,5 @@ PS1="`hostname`$ "
 #echo -e "\033];`hostname`\\007"
 
 function docker_run { sudo docker run -i -t -p "${2}:${2}" "jdw/$1" /bin/bash --login; }
+
+export PATH=~/bin:$PATH

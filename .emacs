@@ -1334,3 +1334,21 @@ I miss 'z.' 'zRET' 'z-' 'H' 'M' 'L' too much"
 ;      (color-theme-initialize)
 ;      (color-theme-hober)))
 
+; configure cider for clojure repl
+
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(when (< emacs-major-version 24)
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize)
+
+(package-refresh-contents)
+
+(package-install 'cider)
+
+; # IF ABOVE DOESN'T WORK:
+; # wget http://melpa.milkbox.net/packages/cider-20140208.602.tar -O /usr/share/emacs24/site-lisp
+
+;## ADD THIS TO REPL
+;# :repl-options {:host "0.0.0.0" :port 4001}
