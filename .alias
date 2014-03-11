@@ -20,7 +20,7 @@ alias dst='docker stop'
 alias drm='docker rm'
 alias drmi='docker rmi'
 alias dc="docker commit"
-alias docker-remove-all='docker ps -a | grep Exit | awk '{print $1}' | sudo xargs docker rm'
+#alias docker-remove-all='docker ps -a | grep Exit | awk '{print $1}' | sudo xargs docker rm'
 
 # GPG
 alias encrypt="gpg -c"
