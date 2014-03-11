@@ -47,7 +47,7 @@ RUN gem install em-websocket onstomp thin keydown jekyll --no-ri --no-rdoc
 RUN useradd -d /home/jdw -c "jdw" -s /bin/bash jdw
 RUN git clone https://github.com/bcferrycoder/jdw-bootstrap.git /home/jdw
 RUN mkdir -p /home/jdw/.git /home/jdw/.ssh
-ADD .ssh/authorized_keys /home/jdw/.ssh/
+#ADD .ssh/authorized_keys /home/jdw/.ssh/
 RUN chmod 700 /home/jdw/.ssh
 ADD config/john-gitconfig /home/jdw/.git/config
 RUN chown -R jdw.jdw /home/jdw
