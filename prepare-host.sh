@@ -5,6 +5,7 @@ USER=jdw
 apt-get install -q -y git-core
 
 apt-get update
+apt-get install -y emacs24
 
 useradd -d /home/${USER} -c "${USER}" -s /bin/bash ${USER}
 git clone https://github.com/bcferrycoder/jdw-bootstrap.git /home/${USER}
