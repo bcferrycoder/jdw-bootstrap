@@ -1312,7 +1312,7 @@ I miss 'z.' 'zRET' 'z-' 'H' 'M' 'L' too much"
 (autoload 'vm "vm" "VM Mail." t)
 
 (menu-bar-mode 0)
-;(transient-mark-mode 0)
+(transient-mark-mode 0)
 
 (setq load-path (cons (expand-file-name "/usr/share/xemacs/xemacs-packages/lisp/cc-mode") load-path))
 
